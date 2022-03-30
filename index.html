@@ -75,7 +75,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="place-buy-btn">Buy Tickets</a>
+                                <button id="buyticket-ny" class="place-buy-btn">Buy Tickets</button>
                             </div>
                          </div>
                          <div class="place-item">
@@ -84,7 +84,7 @@
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="place-buy-btn">Buy Tickets</a>
+                                <button id="buyticket-paris" class="place-buy-btn">Buy Tickets</button>
                             </div>
                          </div>
                          <div class="place-item">
@@ -93,19 +93,77 @@
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="place-buy-btn">Buy Tickets</a>
+                                <button id="buyticket-san" class="place-buy-btn">Buy Tickets</button>
                             </div>
                          </div>
                     </div>
                 </div>
             </div>
-            
             <div class="content-section" id="contact">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
+                <div class="contact">
+                    <div class="contact-info">
+                        <p class="contact-info__text"><i class="fa-solid fa-location-dot"></i>Chicago, US</p>
+                        <p class="contact-info__text"><i class="fa-solid fa-phone"></i>Phone: +00 151515</p>
+                        <p class="contact-info__text"><i class="fa-solid fa-envelope"></i>Email: mail@mail.com</p>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-input__header">
+                            <input type="text" class="contact-input__hea" placeholder="Name">
+                            <input type="text" class="contact-input__hea" placeholder="Email">
+                        </div>
+                        <input type="text" placeholder="Massage">
+                        <button class="contact-btn">SEND</button>
+                    </div>
+                </div>
             </div>
         </div>
-        
+        <img src="./assets/img/map.jpg" alt="" class="img-map">
+        <footer class="footer">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitch"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-weixin"></i>
+        </footer>
     </div>
+    <div id="modal">
+        <div class="modal-container">
+            <div id="close" class="header-close"><i class="fa-solid fa-xmark"></i></div>
+            <header class="modal-header">
+                <i class="fa-solid fa-suitcase"></i>Tickets
+            </header>
+            <div class="modal-body">
+                <p class="modal-body__info"><i class="fa-solid fa-cart-shopping"></i>Tickets, $15 per person</p>
+                <input type="text" class="modal-body__input" placeholder="How many?">
+                <p class="modal-body__info"><i class="fa-solid fa-user"></i>Send To</p>
+                <input type="text" class="modal-body__input" placeholder="Enter email">
+                <button class="modal-body__btn">Pay<i class="fa-solid fa-check"></i></button>
+                <div class="modal-footer">
+                    <button id="close-footer" class="modal-footer__btn">Close<i class="fa-solid fa-xmark"></i></button>
+                    <p class="modal-footer__help">Need <a href="" >help?</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("buyticket-ny").onclick = function () {
+             document.getElementById("modal").style.display = 'flex';
+        }; 
+        document.getElementById("buyticket-paris").onclick = function () {
+             document.getElementById("modal").style.display = 'flex';
+        };
+        document.getElementById("buyticket-san").onclick = function () {
+             document.getElementById("modal").style.display = 'flex';
+        };
+        document.getElementById("close").onclick = function () {
+             document.getElementById("modal").style.display = 'none';
+        };
+        document.getElementById("close-footer").onclick = function () {
+             document.getElementById("modal").style.display = 'none';
+        }; 
+    </script>
 </body>
 </html>
